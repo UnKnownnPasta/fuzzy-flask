@@ -1,0 +1,109 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flexbox;
+  overflow: hidden;
+  margin: 0px;
+}
+
+#navbar {
+  width: 100%;
+  height: 10%;
+  background-color: rgb(44, 42, 42);
+  top: 0px;
+  left: 0px;
+  display: inline-flex;
+}
+
+#content {
+  position: absolute;
+  top: 10%;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: none;
+  z-index: 1;
+}
+
+#navbar > #navbar-collapse {
+  left: 10px;
+  top: 10%;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  width: 50px;
+  height: 80%;
+  position: relative;
+  border: none;
+  font-size: 30px;
+  z-index: 30;
+  opacity: 1;
+}
+
+#navbar > #navbar-li {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  width: max-content;
+  opacity: 1;
+  padding-right: 13px;
+  top: 0%;
+  transition: opacity 100ms ease, top 200ms ease;
+  overflow: hidden;
+}
+
+#navbar > #navbar-li > .ahref {
+  position: relative;
+  flex: 1;
+  padding-right: 20px;
+  text-decoration: none;
+  color: rgb(175, 175, 175);
+  font-size: medium;
+  transition: color 300ms ease-in, font-size 300ms ease-in;
+}
+
+#navbar > #navbar-li > .ahref:hover {
+  color: rgb(255, 255, 255);
+}
+
+.popup {
+  position: relative;
+  width: 100vw;
+  height: 20px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  transition: opacity 200ms ease;
+  z-index: 20;
+}
+
+.error {
+  background-color: rgb(255, 183, 183);
+}
+
+.success {
+  background-color: rgb(227, 255, 200);
+}
+
+.popup-button {
+  background-color: transparent;
+  border-color: transparent;
+  border: none;
+  color: white;
+
+  position: absolute;
+  right: 60px;
+  cursor: pointer;
+  z-index: 4;
+}

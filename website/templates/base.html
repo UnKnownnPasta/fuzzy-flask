@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <title>{% block title %}Website{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/base-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/auth-page.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar">
+        <button id="navbar-collapse">
+            <i class="fa fa-bars" aria-hidden="true" style="color: white;"></i>
+        </button>
+        <ul id="navbar-li">
+            {% if user.is_authenticated %}
+            <a href="/" class="ahref">Home</a>
+            <a href="/logout/" class="ahref">Logout</a>
+            {% else %}
+            <a href="/login/" class="ahref">Login</a>
+            <a href="/signup/" class="ahref">Signup</a>
+            {% endif %}
+        </ul>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+          
+        {% if category == 'error' %}
+            <div class="popup error">
+                {{ message }}
+                <button class="popup-button"><i class="fa fa-close" style="font-size:24px"></i></button>
+            </div>
+        {% elif category == 'success' %}
+            <div class="popup success">
+                {{ message }}
+                <button class="popup-button"><i class="fa fa-close" style="font-size:24px"></i></button>
+            </div>
+        {% endif %}
+
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <div id="content">
+        <style>
+            #content {
+                background-image: none;
+            }
+        </style>
+    {% block content %}
+    {% endblock %}
+    </div>
+
+    <script 
+        type="text/javascript"
+        src="{{ url_for('static', filename='index.js') }}">
+    </script>
+    <script 
+        type="text/javascript"
+        src="{{ url_for('static', filename='authenticate.js') }}">
+    </script>
+    <script 
+        type="text/javascript"
+        src="{{ url_for('static', filename='home-page.js') }}">
+    </script>
+</body>

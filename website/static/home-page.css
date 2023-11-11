@@ -1,0 +1,103 @@
+#content {
+    display: block;
+    justify-content: left;
+    align-items: first baseline;
+    background-image: none;
+    z-index: 1;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+.notes-text {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+}
+
+.notes-text-alt {
+    font-family: 'Josefin Sans';
+}
+
+.notes-area {
+    padding: 10px;
+    position: relative;
+    width: 60%;
+    height: 80px;
+    top: 100px;
+
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+    font-size: large;
+}
+
+.form {
+    position: relative;
+    margin-top: -100px;
+    top: 10px;
+    margin-bottom: 10rem;
+}
+
+.form-text {
+    position: relative;
+    padding-left: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    top: 10px;
+}
+
+.notes-delete {
+    color: black;
+    position: absolute;
+    left: 98%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.notes-data {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;    
+    border-bottom-style: solid;
+    border-bottom-color: rgba(160, 160, 160, 0.487);
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+    border-bottom-width: 1px;
+}
+
+.notes-list {
+    width: 80%;
+    margin-bottom: 40px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    list-style-type: none;
+    text-decoration: none;
+    position: relative;
+}
+
+#notes-new {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 40px;
+    top: 110px;
+}
+
+.notes-button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: rgb(32, 120, 253);
+    font-size: large;
+    color: white;
+    z-index: 10;
+}

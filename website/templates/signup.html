@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Website | Sign Up{% endblock %}
+
+{% block content %}
+<style>
+    #content {    
+        background-image: url(https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<h3 class="form-text">SIGN UP</h3>
+<form method="post" class="form-page" novalidate>
+    <div class="form-contents">
+        <label for="firstName" class="form-set form-label-text">First Name</label>
+        <input 
+            type="text"
+            name="form-firstName" 
+            id="form-firstName" 
+            class="form-set"
+            placeholder="Enter Your First Name"
+        />
+        <label for="email" class="form-set form-label-text">Email</label>
+        <input 
+            type="email" 
+            name="form-email" 
+            id="form-email"
+            class="form-set"
+            placeholder="Enter Your Email"
+        />
+        <label for="password1" class="form-set form-label-text">Password</label>
+        <input
+            type="password1" 
+            name="form-password1" 
+            id="form-password1" 
+            class="form-set"
+            placeholder="Enter Your Password"
+        />
+        <label for="password2" class="form-set form-label-text">Confirm Password</label>
+        <input
+            type="password2" 
+            name="form-password2" 
+            id="form-password2" 
+            class="form-set"
+            placeholder="Confirm Your Password"
+        />
+        <button id="form-set-final">Submit</button>
+    </div>
+</form>
+<button id="form-set-1">Next</button>
+<button id="form-set-2">Previous</button>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Website | Login{% endblock %}
+
+{% block content %}
+<style>
+    #content {    
+        background-image: url(https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<h3 class="form-text">LOGIN</h3>
+<form method="post" class="form-page" novalidate>
+    <div class="form-contents">
+        <label for="email" class="form-set form-label-text">Email</label>
+        <input 
+            type="email" 
+            name="form-email" 
+            id="form-email"
+            class="form-set"
+            placeholder="Enter Your Email"
+        />
+        <label for="password" class="form-set form-label-text">Password</label>
+        <input
+            type="password1" 
+            name="form-password" 
+            id="form-password" 
+            class="form-set"
+            placeholder="Enter Your Password"
+        />
+        <button id="form-set-final">Login</button>
+    </div>
+</form>
+<button id="form-set-1">Next</button>
+<button id="form-set-2">Previous</button>
+{% endblock %}

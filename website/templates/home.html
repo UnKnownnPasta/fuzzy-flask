@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Website | Home{% endblock %}
+
+{% block content %}
+<div class="form-text">Notes Stored</div>
+<ul class="notes-text-alt notes-list">
+     {% for note in user.notes %}
+     <li class="notes-data notes-text">
+        <span style="position: relative; padding-right: 50px;">{{ note.data }}</span>
+        <button class="notes-delete" onclick="deleteNote({{ note.id }})"><i class="fa fa-close" style="font-size:24px"></i></button>
+     </li>
+     {% endfor %}
+</ul>
+<form method="post" class="form">
+    <textarea name="note" id="note" class="notes-text notes-area"></textarea>
+    <div id="notes-new">
+        <button type="submit" class="notes-button">
+            Add Note
+        </button>
+    </div>
+</form>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='home-page.css') }}">
+{% endblock %}
